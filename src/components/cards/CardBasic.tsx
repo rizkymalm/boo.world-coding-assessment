@@ -13,7 +13,7 @@ const CardBasic = ({
 }: CardBasicProps) => {
   return (
     <div
-      className={`relative rounded-xl border-2 border-none bg-white p-4 shadow-custom-gray ${
+      className={`relative rounded-2xl border-2 border-none bg-white p-4 shadow-custom-gray ${
         className ?? ""
       }`}
       {...props}

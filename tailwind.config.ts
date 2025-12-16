@@ -117,18 +117,6 @@ const config: Config = {
         "meta-8": "#F0950C",
         "meta-9": "#E5E7EB",
         "meta-10": "#0FADCF",
-        // success: {
-        //     50: '#F4FFF3',
-        //     100: '#E3FFE2',
-        //     200: '#BCFCBB',
-        //     300: '#99F497',
-        //     400: '#60E55D',
-        //     500: '#34D130',
-        //     600: '#04BB00',
-        //     700: '#059F02',
-        //     800: '#027600',
-        //     900: '#024D00',
-        // },
         danger: {
           50: "#FEF4F3",
           100: "#FFE8E7",
@@ -141,18 +129,6 @@ const config: Config = {
           800: "#720600",
           900: "#260200",
         },
-        // warning: {
-        //     50: '#FFFAE5',
-        //     100: '#FFF0B7',
-        //     200: '#FFE78A',
-        //     300: '#FFDE5C',
-        //     400: '#FFD52E',
-        //     500: '#FFCC00',
-        //     600: '#D6AB00',
-        //     700: '#AD8B00',
-        //     800: '#856A00',
-        //     900: '#5C4900',
-        // },
       },
       fontSize: {
         "title-xxl": ["72px", "90px"],
@@ -440,7 +416,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addVariant }: any) {
+    function ({ addVariant }: { addVariant: (name: string, definition: string | string[]) => void }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
     },

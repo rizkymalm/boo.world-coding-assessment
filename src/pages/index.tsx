@@ -1,38 +1,21 @@
-import { useEffect, useState } from "react";
-import { Question } from "@/types/question";
-import QuestionCard from "@/components/QuestionCard";
 import HomeLayout from "@/components/layouts/HomeLayout";
-import { CardBasic } from "@/components/cards";
-import Chip from "@/components/Chip";
+import HomeTimeline from "@/components/ui/HomeTimeline";
+import HomeUniverse from "@/components/ui/HomeUniverse";
+import RelatedPosts from "@/components/ui/RelatedPosts";
 
 export default function Home() {
-  const [question, setQuestion] = useState<Question | null>(null);
-
-  useEffect(() => {
-    fetch("/api/question")
-      .then((res) => res.json())
-      .then(setQuestion);
-  }, []);
-
-  if (!question) return null;
-
   return (
     <HomeLayout>
       <div className="container mx-auto min-h-screen w-full max-w-full">
         <div className="container relative min-h-screen w-full items-center justify-center py-8 px-2">
           <div className="fixed w-75">
-            <CardBasic title="Universes" className="w-full">
-              <div className="w-full py-4">
-                <ul>
-                  <li className="flex justify-between items-center">
-                    <Chip label="#Music" />
-                    <p className="text-text-xs text-textDarkTertiary">
-                      26M souls
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </CardBasic>
+            <HomeUniverse />
+          </div>
+          <div className="mx-auto w-150 mr-120 ml-80">
+            <HomeTimeline />
+          </div>
+          <div className="fixed w-110 right-4 max-h-150 overflow-auto no-scrollbar px-4 top-25">
+            <RelatedPosts />
           </div>
         </div>
       </div>

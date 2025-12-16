@@ -1,7 +1,9 @@
 import { Icon } from "@iconify/react";
 import { sidebarConfig } from "./SidebarConfig";
+import { usePathname } from "next/navigation";
 
 const HomeSidebarCollapse = () => {
+  const pathname = usePathname();
   return (
     <div>
       <div className="flex">
@@ -11,9 +13,8 @@ const HomeSidebarCollapse = () => {
               item.type === "menu" && (
                 <li
                   className={`relative my-2 flex cursor-pointer justify-center rounded-md p-2 transition-colors duration-200 hover:bg-accent/20 ${
-                    location.pathname === item.pathMatch &&
-                    "dark:bg-accent-dark"
-                  } dark:text-textDarkPrimary dark:hover:text-textDarkPrimary`}
+                    pathname === item.pathMatch && "text-accent"
+                  } hover:text-accent hover:scale-105 transition-all duration-300`}
                   key={item.pathMatch}
                 >
                   <div className="flex w-full" role="button" tabIndex={0}>

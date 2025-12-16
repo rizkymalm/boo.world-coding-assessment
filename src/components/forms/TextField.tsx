@@ -1,11 +1,11 @@
 import React from "react";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  contentBefore?: any;
-  contentAfter?: any;
+  contentBefore?: React.ReactNode;
+  contentAfter?: React.ReactNode;
   fullWidth?: boolean;
   error?: boolean;
-  helperText?: any;
+  helperText?: string;
   align?: "right" | "left" | "center";
 }
 
