@@ -1,0 +1,55 @@
+export const sidebarConfig = [
+  {
+    name: "Home",
+    icon: "solar:planet-linear",
+    link: "/",
+    pathMatch: "/",
+    type: "menu",
+  },
+  {
+    name: "Match",
+    icon: "arcticons:i-love-hue-too",
+    link: "/Match",
+    pathMatch: "/Match",
+    type: "menu",
+  },
+  {
+    name: "Messages",
+    icon: "mdi:message-outline",
+    link: "/messages",
+    pathMatch: "/messages",
+    type: "menu",
+  },
+  {
+    name: "Profile",
+    icon: "solar:ghost-linear",
+    link: "/profile",
+    pathMatch: "/profile",
+    type: "menu",
+  },
+  {
+    name: "Personality",
+    type: "header",
+  },
+  {
+    name: "Personality Database",
+    icon: "mdi:email-outline",
+    link: "/personality-database",
+    pathMatch: "/personality-database",
+    type: "menu",
+  },
+  {
+    name: "Personality Test",
+    icon: "icon-park-outline:edit-one",
+    link: "/personality-test",
+    pathMatch: "/personality-test",
+    type: "menu",
+  },
+  {
+    name: "Resources",
+    icon: "ix:user-profile",
+    link: "/resources",
+    pathMatch: "/resources",
+    type: "menu",
+  },
+];
