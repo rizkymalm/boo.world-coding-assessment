@@ -14,7 +14,7 @@ const HomeSidebar = () => {
                 <div
                   className={`flex w-full cursor-pointer gap-1 rounded-md p-3 transition-all duration-500 ${
                     pathname === item.pathMatch && "text-accent scale-105"
-                  } hover:scale-105 active:scale-99 dark:text-textDarkPrimary dark:hover:text-textDarkPrimary`}
+                  } hover:scale-105 active:scale-99`}
                   role="button"
                   tabIndex={0}
                 >
@@ -30,7 +30,10 @@ const HomeSidebar = () => {
                 </div>
               </li>
             ) : (
-              <li className="my-4 px-2 text-sm font-semibold uppercase tracking-wider text-textDarkSecondary dark:text-textDarkSecondary"key={item.name}>
+              <li
+                className="my-4 px-2 text-sm font-semibold uppercase tracking-wider text-textDarkSecondary"
+                key={item.name}
+              >
                 {item.name}
               </li>
             )
