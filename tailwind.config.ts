@@ -341,6 +341,8 @@ const config: Config = {
         12: "12px",
       },
       boxShadow: {
+        "custom-light": "0 0 12px rgb(78 220 216 / 70%)",
+        "custom-gray": "0 0 12px rgb(0 0 0 / 10%)",
         default: "0px 8px 13px -3px rgba(0, 0, 0, 0.07)",
         card: "0px 1px 3px rgba(0, 0, 0, 0.12)",
         "card-2": "0px 1px 2px rgba(0, 0, 0, 0.05)",

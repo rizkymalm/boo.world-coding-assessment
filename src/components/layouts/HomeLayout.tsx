@@ -18,7 +18,7 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
     <div className="relative flex min-h-screen max-w-full overflow-hidden">
       <HomeProfile toggle={handleSidebarToggle} />
       <div
-        className={`border-outset fixed top-15 inset-y-0 left-0 z-999 m-auto border-r-2 shadow-custom-light transition-all duration-300 dark:bg-bgDarkPrimary dark:text-textDarkPrimary ${
+        className={`border-outset fixed top-15 inset-y-0 left-0 z-999 m-auto transition-all duration-300  ${
           toggleSidebar === "expand" ? "w-65" : "w-20"
         } `}
       >
@@ -27,7 +27,7 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
       <div
         className={`relative z-1 ${
           toggleSidebar === "expand" ? "ml-65" : "ml-20"
-        } mt-15 min-h-screen flex-1 overflow-auto p-4 transition-all duration-300`}
+        } mt-15 min-h-screen flex-1 overflow-auto transition-all duration-300`}
       >
         {children}
       </div>
